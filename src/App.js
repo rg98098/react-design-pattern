@@ -7,7 +7,8 @@ function App() {
 
   const UserInfoWrapped = (UserInfoForm,"234");
 	return (
-    <UserInfoForm />
+    // <UserInfoForm />
+    <UserInfo/>
 	);
 }
 
