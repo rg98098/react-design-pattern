@@ -1,18 +1,30 @@
-import { ProductInfo } from "./ProductInfo";
-import { UserInfo } from "./UserInfo";
-import { UserInfoForm } from "./UserInfoForm";
-import { withUser } from "./withUser";
+import { RecursiveComponent } from "./RecursiveComponent";
 
+const nestedObject = {
+	a: 1,
+	b: {
+		b1: 4,
+		b2: {
+			b23: 'Hello',
+		},
+		b3: {
+			b31: {
+				message: 'Hi',
+			},
+			b32: {
+				message: 'Hi',
+			}
+		}
+	},
+	c: {
+		c1: 2,
+		c2: 3,
+	}
+}
 
 function App() {
-
-  const UserInfoWrapped = (UserInfoForm,"234");
 	return (
-    // <UserInfoForm />
-    <>
-    <UserInfo userId={"123"}/>
-    <ProductInfo productId={"1234"}/>
-    </>
+		<RecursiveComponent data={nestedObject} />
 	);
 }
 
