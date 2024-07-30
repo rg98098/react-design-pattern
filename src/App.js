@@ -1,12 +1,12 @@
-import { printProps } from "./printProps";
 import { UserInfo } from "./UserInfo";
+import { withUser } from "./withUser";
 
 
 function App() {
 
-  const UserInfoWrapped = printProps(UserInfo);
+  const UserInfoWrapped = withUser(UserInfo,"234");
 	return (
-    <UserInfoWrapped a={12} b="Hello" c={{name: "Rahul"}}/>
+    <UserInfoWrapped />
 	);
 }
 
