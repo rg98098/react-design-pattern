@@ -1,4 +1,5 @@
-import { BigSuccessButton, DangerButton } from "./composition";
+// import { BigSuccessButton, DangerButton } from "./composition";
+import { BigSuccessButton, DangerButton } from "./partiallyApply";
 import { RecursiveComponent } from "./RecursiveComponent";
 
 const nestedObject = {
@@ -25,7 +26,6 @@ const nestedObject = {
 
 function App() {
 	return (
-		// <RecursiveComponent data={nestedObject} />
     <>
       <DangerButton text={"don't do it"}/>
       <BigSuccessButton text="Yes! i won"/>
